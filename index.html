@@ -1,32 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-    #container{
+    #container {
       width: 700px;
       display: flex;
       flex-direction: column;
     }
+
     div.box {
-      width:40px;
-      height:40px; 
-      float:left; 
+      width: 40px;
+      height: 40px;
+      float: left;
       margin: 0 2px 2px 0;
     }
-    button{
+
+    button {
       background-image: linear-gradient(60deg, #24ce60 10%, #1fca94 50%, #089a86 100%);
-      border: 1px solid  #089a86;
+      border: 1px solid #089a86;
       color: white;
       font-size: 20px;
     }
   </style>
 </head>
+
 <body>
   <h2>Hello</h2>
+  <h3>hello git</h3>
   <div id="container">
     <div id="blocks"></div>
     <button onclick="addBlock()">Add block</button>
@@ -34,17 +39,18 @@
 
 
   <script>
-    function addBlock(){
+    function addBlock() {
       let div = document.createElement("div");
       div.classList.add("box");
-      div.style.backgroundColor = "rgb(" + Math.round(255*Math.random()) + "," +  Math.round(255*Math.random()) + "," + Math.round(255*Math.random()) + ")" ;
+      div.style.backgroundColor = "rgb(" + Math.round(255 * Math.random()) + "," + Math.round(255 * Math.random()) + "," + Math.round(255 * Math.random()) + ")";
       let blocks = document.getElementById("blocks");
       blocks.appendChild(div);
 
-      div.onclick = function(){
+      div.onclick = function () {
         blocks.removeChild(this);
       }
     }
   </script>
 </body>
+
 </html>
